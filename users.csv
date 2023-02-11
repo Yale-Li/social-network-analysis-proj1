@@ -1,31 +1,102 @@
-id,name
-143636182,Eric Okafor
-4211800833,Zeelicious Foods
-880142286176231425,YouTube Music
-93711247,Android Developers
-38679388,Gmail
-33838201,Google AI
-20536157,Google
-50393960,Bill Gates
-17471979,National Geographic
-3108351,The Wall Street Journal
-1636590253,Tim Cook
-13298072,Tesla
-10228272,YouTube
-4549162582,every lot chicago
-866953267,Cardi B
-759251,CNN
-17919972,Taylor Swift
-11348282,NASA
-44196397,Elon Musk
-1349149096909668363,President Biden
-143636182,Eric Okafor
-4211800833,Zeelicious Foods
-880142286176231425,YouTube Music
-93711247,Android Developers
-38679388,Gmail
-33838201,Google AI
-20536157,Google
-50393960,Bill Gates
-17471979,National Geographic
-3108351,The Wall Street Journal
+id,name,username,mark
+1620651618038419456,Yale,,True
+143636182,Eric Okafor,KneWKeeD,True
+4211800833,Zeelicious Foods,zeeliciousfoods,True
+880142286176231425,YouTube Music,youtubemusic,True
+93711247,Android Developers,AndroidDev,True
+38679388,Gmail,gmail,True
+33838201,Google AI,GoogleAI,True
+20536157,Google,Google,True
+50393960,Bill Gates,BillGates,
+17471979,National Geographic,NatGeo,
+3108351,The Wall Street Journal,WSJ,
+1636590253,Tim Cook,tim_cook,
+13298072,Tesla,Tesla,
+10228272,YouTube,YouTube,
+4549162582,every lot chicago,everylotchicago,
+866953267,Cardi B,iamcardib,
+759251,CNN,CNN,
+17919972,Taylor Swift,taylorswift13,
+11348282,NASA,NASA,
+44196397,Elon Musk,elonmusk,
+1349149096909668363,President Biden,POTUS,
+143636182,Eric Okafor,KneWKeeD,
+4211800833,Zeelicious Foods,zeeliciousfoods,
+880142286176231425,YouTube Music,youtubemusic,
+93711247,Android Developers,AndroidDev,
+38679388,Gmail,gmail,
+33838201,Google AI,GoogleAI,
+20536157,Google,Google,
+50393960,Bill Gates,BillGates,
+17471979,National Geographic,NatGeo,
+3108351,The Wall Street Journal,WSJ,
+768272538,Harri Obi,Harri_obi,
+2358300761,Ikenna S.,1K3NN4,
+196635814,Mr Madox,Mr_Madox,
+626849052,Communicator 🐦,usman__haruna,
+3247967476,Ruby Aka Nnenna Far From Home Netflix,Rubyokezie,
+320439510,Greg,gregcroc,
+201202497,Dessi,dendessy,
+29841654,chidi mokeme,chidimokeme,
+234741737,Samuel Ekene,Lucca_tonni,
+747203874180653057,TechOdyssey | #TechRejects,AdamJMatlock,
+1446133140964192256,Aanu Adeyemo,_aanuolin,
+913267967185637377,Chiamaka Nwakalor-Egemba,chef_amakaa,
+1490397761048559619,Arinze Ephraim,EphraimArinze1,
+302413828,MrMacaroni,mrmacaronii,
+1329071740140490752,honeyafricatv,honeyafricatv,
+971127993925029889,TORI's KITCHEN,Toris_kitchen,
+308269557,Dr. Chinonso Egemba,aproko_doctor,
+1378297447701753857,Nairacontract,nairacontract,
+614740381,Amara (Beautifully Engraced),amara0f4,
+1153329011780665357,Kelvin.,realkelvin07,
+169064623,BR ☆,breerunway,
+1164968668473843717,Cat Burns,catburns,
+919939970927943687,Nia Archives,archives_nia,
+1298662914698678279,FLO,flolikethis,
+39878074,Ari Lennox,AriLennox,
+26392098,smi,smino,
+107436986,Shania Twain 💎💎💎,ShaniaTwain,
+930510644763287552,knxwledge,knxwledge,
+43901113,YouTube Advertisers,YTAdvertisers,
+709404702,Divino Niño,DivinoNinoband,
+21578927,Takeshi Hagikura,thagikura,
+76538135,Dinorah Tovar,DDinorahtovar,
+14678973,Matthew J. McCullough,matthewmccull,
+165713975,Márton Braun @zsmb13@androiddev.social,zsmb13,
+167463460,Ale~ astamato@androiddev.social,astamatok,
+1095416403870580738,Ahmed Tikiwa,ahmed_tikiwa,
+222522906,chrisarriola@androiddev.social,arriolachris,
+1563038755455307777,Google Pixel,GooglePixel_US,
+347645640,@matt@androiddev.social 🐘,himattm,
+248024631,Check @jlengrand@mastodon.online,jlengrand,
+2860116159,Suzanne Jones,boudicca_fight,
+1251551657227411456,Mukesh Kumar,MukeshSakarwal,
+20088765,Javier Soltero 🇵🇷,jsoltero,
+23536666,Kelly Waldher,kwaldher,
+1283458616285106183,Laura Mae Martin,LauraMaeMartin,
+950864012,🐍🐘ChristinaⓋ🐭🦅,cvondrashek,
+149917241,🌏🚶🏻Mr. Tweet 📷 😷,CoolSky_,
+17003765,Google Workspace,GoogleWorkspace,
+12460982,Larry Dignan,ldignan,
+227037531,Stephanie Condon,StephCondonPDX,
+1264252764345044993,The Africa I Know®,theafricaiknow_,
+322711407,ACM Digital Library,ACMDL,
+82364810,MIT CSAIL,MIT_CSAIL,
+54290504,IEEE,IEEEorg,
+52220019,IEEE ComputerSociety,ComputerSociety,
+115763683,Association for Computing Machinery,TheOfficialACM,
+1194202635114557440,Google Health,GoogleHealth,
+1963617619,The Team at X,Theteamatx,
+19367815,Google Cloud,googlecloud,
+796092645193846784,Waymo,Waymo,
+1251551657227411456,Mukesh Kumar,MukeshSakarwal,
+1563038755455307777,Google Pixel,GooglePixel_US,
+1376638214920753154,Thomas Kurian,ThomasOrTK,
+17424053,fitbit,fitbit,
+1403022445511024643,"yoo-lan, CLOSED",raspbevrry,
+1362899548541124609,AdsLiaison,adsliaison,
+1383967390556246018,Quantum AI,GoogleQuantumAI,
+398500188,Prabhakar Raghavan,WittedNote,
+96268540,Stephan Somogyi,thinkpanzer,
+1270530610293911552,Google for Creators,googlecreators,

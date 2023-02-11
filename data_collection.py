@@ -1,10 +1,11 @@
 import requests
-import json
 import csv
 
 
+DEFAULT_ID = '1620651618038419456'
+DEFAULT_NAME = 'Yale'
+
 bearer_token = 'AAAAAAAAAAAAAAAAAAAAAGRGlgEAAAAAAm75qarmeNp3oZLmLmxvUAFjRKQ%3DwvzR3y8uGOJeuMLM5Y7pxJ2WU5AHYCMhcuo62EMSnHbYine95p'
-yale_id = '1620651618038419456'
 
 search_url = 'https://api.twitter.com/2/tweets/search/recent'
 search_params = {'query': '(from:twitterdev -is:retweet) OR #twitterdev','tweet.fields': 'author_id'}
@@ -36,38 +37,47 @@ def get_tweet(tweet_id):
     return get(tweet_url)
 
 def fetch_whole_data():
-    json_response = get_following(yale_id)
-    users = json_response['data'][:20]
-    relationship = set()
-    index = 0
+    users = []#read_from_csv('users')
+    # relationship = read_from_csv('relationship')
+    if len(users) == 0:
+        json_response = get_following(DEFAULT_ID)
+        users = [{'id': DEFAULT_ID, 'name': DEFAULT_NAME, 'mark': True}] + json_response['data'][:20]
+        relationship = [{'id': DEFAULT_ID, 'following': user['id']} for user in users]
+        index = 0
 
-    while len(users) < 500:
+    while len(users) < 100:
         userid = users[index]['id']
+        json_response = get_following(userid)
+
+        users[index]['mark'] = True
         count = json_response['meta']['result_count']
         if count > 10:
             count = 10
         for i in range(count):
             users.append(json_response['data'][i])
-            relationship.append([userid, json_response['data'][i]['id']])
-        # json_response = get_following(userid)
+            relationship.append({'id': userid, 'following': json_response['data'][i]['id']})
         index += 1
         # print('result', followees, relationship)
 
     return (users, relationship)
-    
+
 def write_to_csv(name, head, data):
     with open(f'{name}.csv', 'w') as f:
-        write = csv.writer(f)
-        write.writerow(head)
+        write = csv.DictWriter(f, fieldnames=head)
+        write.writeheader()
         write.writerows(data)
+
+def read_from_csv(name):
+    with open(f'{name}.csv', 'r') as f:
+        read = csv.DictReader(f)
+        next(read)
+        return [row for row in read]
 
 
 if __name__ == '__main__':
 
-    # (followees, relationship) = fetch_whole_data()
-    (followees, relationship) = ([], [])
-    userlist = set()
-    for user in followees:
-        userlist.append([user['id'], user['name']])
-    write_to_csv('users', ['id', 'name'], userlist)
-    write_to_csv('relationship', ['id', 'id'], relationship)
+    (users, relationship) = fetch_whole_data()
+    # (followees, relationship) = ([], [])
+    write_to_csv('users', ['id', 'name', 'username', 'mark'], users)
+    write_to_csv('relationship', ['id', 'following'], relationship)
+    print(read_from_csv('users'))
