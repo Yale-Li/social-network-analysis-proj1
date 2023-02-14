@@ -37,13 +37,19 @@ def get_tweet(tweet_id):
     return get(tweet_url)
 
 def fetch_whole_data():
-    users = []#read_from_csv('users')
-    # relationship = read_from_csv('relationship')
+    users = read_from_csv('users')
+    relationship = read_from_csv('relationship')
+    
+    index = 0
     if len(users) == 0:
         json_response = get_following(DEFAULT_ID)
         users = [{'id': DEFAULT_ID, 'name': DEFAULT_NAME, 'mark': True}] + json_response['data'][:20]
         relationship = [{'id': DEFAULT_ID, 'following': user['id']} for user in users]
-        index = 0
+    else:
+        for idx, user in enumerate(users):
+            if user['mark'] != 'True':
+                index = idx
+                break
 
     while len(users) < 100:
         userid = users[index]['id']
@@ -53,11 +59,11 @@ def fetch_whole_data():
         count = json_response['meta']['result_count']
         if count > 10:
             count = 10
+
         for i in range(count):
             users.append(json_response['data'][i])
             relationship.append({'id': userid, 'following': json_response['data'][i]['id']})
         index += 1
-        # print('result', followees, relationship)
 
     return (users, relationship)
 
@@ -70,14 +76,14 @@ def write_to_csv(name, head, data):
 def read_from_csv(name):
     with open(f'{name}.csv', 'r') as f:
         read = csv.DictReader(f)
-        next(read)
+        # next(read)
         return [row for row in read]
 
 
 if __name__ == '__main__':
 
     (users, relationship) = fetch_whole_data()
-    # (followees, relationship) = ([], [])
+
     write_to_csv('users', ['id', 'name', 'username', 'mark'], users)
     write_to_csv('relationship', ['id', 'following'], relationship)
-    print(read_from_csv('users'))
+    # print(read_from_csv('users'))
