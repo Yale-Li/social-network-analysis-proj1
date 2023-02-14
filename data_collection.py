@@ -51,7 +51,7 @@ def fetch_whole_data():
                 index = idx
                 break
 
-    while len(users) < 100:
+    while len(users) < 400:
         userid = users[index]['id']
         json_response = get_following(userid)
 
