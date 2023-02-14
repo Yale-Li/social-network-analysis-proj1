@@ -35,3 +35,8 @@ nx.draw(G, with_labels=False)
 
 plt.show()
 
+dict = nx.closeness_centrality(G)
+
+lst = [round(v, 5) for v in dict.values()]
+plt.hist(lst)
+plt.show()
